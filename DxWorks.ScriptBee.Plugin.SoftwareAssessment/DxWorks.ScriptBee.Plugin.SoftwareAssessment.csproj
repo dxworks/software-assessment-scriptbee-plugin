@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <ProjectReference Include="DxWorks.ScriptBee.Plugin.Api.csproj" />
+        <ProjectReference Include="Honeydew.ScriptBeePlugin.csproj" />
+        <ProjectReference Include="JiraScriptBeePlugin.csproj" />
+        <ProjectReference Include="Dxworks.ScriptBee.Plugins.InspectorGit.csproj" />
+    </ItemGroup>
+</Project>
