@@ -1,5 +1,6 @@
 ﻿using DxWorks.ScriptBee.Plugin.Api;
 using Dxworks.ScriptBee.Plugins.InspectorGit.Model;
+using Honeydew.ScriptBeePlugin;
 using Honeydew.ScriptBeePlugin.Models;
 using JiraScriptBeePlugin.Models;
 
@@ -24,20 +25,18 @@ public class SoftwareAssessmentLinker : IModelLinker
                 {
                     if (commit.Message.Contains(issue.key))
                     {
-                        var commitIssues = commit["Issues"];
-                        if (commitIssues is List<Issue> issuesList)
+                        if (commit.HasProperty("Issues"))
                         {
-                            issuesList.Add(issue);
+                            (commit["Issues"] as List<Issue>).Add(issue);
                         }
                         else
                         {
                             commit["Issues"] = new List<Issue> { issue };
                         }
-                        
-                        var issuesCommits = issue["Commits"];
-                        if (issuesCommits is List<Commit> commitsList)
+
+                        if (issue.HasProperty("Commits"))
                         {
-                            commitsList.Add(commit);
+                            (issue["Commits"] as List<Commit>).Add(commit);
                         }
                         else
                         {
