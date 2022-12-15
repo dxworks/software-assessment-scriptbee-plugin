@@ -1,0 +1,1 @@
+﻿# Software Assessment ScriptBee Plugin

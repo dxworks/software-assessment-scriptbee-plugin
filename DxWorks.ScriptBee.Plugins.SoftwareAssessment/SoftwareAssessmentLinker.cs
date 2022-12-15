@@ -1,10 +1,10 @@
 ﻿using DxWorks.ScriptBee.Plugin.Api;
+using DxWorks.ScriptBee.Plugins.Honeydew;
+using DxWorks.ScriptBee.Plugins.Honeydew.Models;
 using Dxworks.ScriptBee.Plugins.InspectorGit.Model;
-using Honeydew.ScriptBeePlugin;
-using Honeydew.ScriptBeePlugin.Models;
-using JiraScriptBeePlugin.Models;
+using DxWorks.ScriptBee.Plugins.JiraMiner.Models;
 
-namespace DxWorks.ScriptBee.Plugin.SoftwareAssessment;
+namespace DxWorks.ScriptBee.Plugins.SoftwareAssessment;
 
 public class SoftwareAssessmentLinker : IModelLinker
 {
@@ -23,7 +23,7 @@ public class SoftwareAssessmentLinker : IModelLinker
             {
                 foreach (var commit in repository.Commits)
                 {
-                    if (commit.Message.Contains(issue.key))
+                    if (commit.Message.Contains(issue.Key))
                     {
                         if (commit.HasProperty("Issues"))
                         {

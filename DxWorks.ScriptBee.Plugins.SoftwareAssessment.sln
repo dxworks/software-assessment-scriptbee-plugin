@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DxWorks.ScriptBee.Plugin.SoftwareAssessment", "DxWorks.ScriptBee.Plugin.SoftwareAssessment\DxWorks.ScriptBee.Plugin.SoftwareAssessment.csproj", "{188F2D7A-78CA-4F4F-8238-E9760E35F63D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DxWorks.ScriptBee.Plugins.SoftwareAssessment", "DxWorks.ScriptBee.Plugins.SoftwareAssessment\DxWorks.ScriptBee.Plugins.SoftwareAssessment.csproj", "{188F2D7A-78CA-4F4F-8238-E9760E35F63D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
