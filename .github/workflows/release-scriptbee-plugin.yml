@@ -39,22 +39,22 @@ jobs:
           cp -R bin/*.dll software-assessment
 
       - name: Create Archive
-        run: zip -j software-assessment@${{ steps.semver_parser.outputs.semver }}.zip software-assessment/*
+        run: zip -j software-assessment-scriptbee.zip software-assessment/*
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
-          name: software-assessment@${{ steps.semver_parser.outputs.semver }}.zip
-          path: software-assessment@${{ steps.semver_parser.outputs.semver }}.zip
+          name: software-assessment-scriptbee.zip
+          path: software-assessment-scriptbee.zip
 
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v1
         with:
-          name: software-assessment ${{ steps.semver_parser.outputs.semver }}
+          name: software-assessment ScriptBee plugin ${{ steps.semver_parser.outputs.semver }}
           body: ""
           prerelease: false
           draft: false
           fail_on_unmatched_files: true
           files: |
-            ./software-assessment@${{ steps.semver_parser.outputs.semver }}.zip
+            ./software-assessment-scriptbee.zip

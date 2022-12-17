@@ -6,3 +6,12 @@ extensionPoints:
   - kind: Linker
     entryPoint: DxWorks.ScriptBee.Plugins.SoftwareAssessment.dll
     version: 1.0.0
+  - kind: Plugin
+    entryPoint: honeydew
+    version: 3.0.1
+  - kind: Plugin
+    entryPoint: jira-miner
+    version: 1.0.0
+  - kind: Plugin
+    entryPoint: inspector-git
+    version: 1.0.0
