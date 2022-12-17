@@ -8,7 +8,7 @@ namespace DxWorks.ScriptBee.Plugins.SoftwareAssessment;
 
 public class SoftwareAssessmentLinker : IModelLinker
 {
-    public string GetName() => "Software Assessment";
+    public string GetName() => "software-assessment";
 
     public Task LinkModel(Dictionary<Tuple<string, string>, Dictionary<string, ScriptBeeModel>> context,
         Dictionary<string, object>? configuration = default, CancellationToken cancellationToken = default)
